@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import FileManagerSlice from "./FileManagerSlice";
+import admin from "./admin";
 
 export const store = configureStore({
   reducer: {
-    FileManager : FileManagerSlice
+    admin : admin
   },
 });

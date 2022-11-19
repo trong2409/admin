@@ -3,7 +3,7 @@ import { useNavigate, Outlet, Link } from "react-router-dom";
 import { ApartmentOutlined, UserOutlined } from "@ant-design/icons";
 import { Row, Col, Button } from "antd";
 
-import { logout } from "../../redux/FileManagerSlice";
+import { logout } from "../../redux/admin";
 import classes from "./DashBoard.module.scss";
 
 function DashBoard() {

@@ -54,8 +54,8 @@ const initialState = {
   isLogin: getItemLocal("user") ? true : false,
 };
 
-export const FileManagerSlice = createSlice({
-  name: "FileManagerSlice",
+export const admin = createSlice({
+  name: "admin",
   initialState,
   reducers: {
     logout: (state) => {
@@ -100,6 +100,6 @@ export const FileManagerSlice = createSlice({
   },
 });
 
-export const { logout } = FileManagerSlice.actions;
+export const { logout } = admin.actions;
 
-export default FileManagerSlice.reducer;
+export default admin.reducer;

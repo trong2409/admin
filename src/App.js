@@ -7,7 +7,6 @@ import Login from "./page/Login/Login";
 import DashBoard from "./page/DashBoard";
 import Products from "./page/DashBoard/Products";
 import Users from "./page/DashBoard/Users";
-import { refreshToken, getItemLocal } from "./redux/FileManagerSlice";
 
 function App() {
   const dispatch = useDispatch();
