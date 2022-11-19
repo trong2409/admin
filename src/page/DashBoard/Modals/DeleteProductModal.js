@@ -1,6 +1,6 @@
 import { Modal, Typography } from "antd";
 
-function DeleteGroupModal({ isOpen, setIsOpen, group }) {
+function DeleteProductModal({ isOpen, setIsOpen, product }) {
   const handleOk = () => {
     setIsOpen(false);
   };
@@ -16,10 +16,10 @@ function DeleteGroupModal({ isOpen, setIsOpen, group }) {
         onCancel={handleCancel}
         okButtonProps={{ type: "danger" }}
       >
-        <Typography.Text>Delete {group} ?</Typography.Text>
+        <Typography.Text>Delete {product} ?</Typography.Text>
       </Modal>
     </>
   );
 }
 
-export default DeleteGroupModal;
+export default DeleteProductModal;

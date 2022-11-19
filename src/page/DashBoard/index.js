@@ -21,14 +21,14 @@ function DashBoard() {
           <Col span={4} className={classes.menu}>
             <Row>
               <Col span={24}>
-                <Link to="groups">
+                <Link to="products">
                   <Button icon={<ApartmentOutlined />} ghost>
-                    Groups
+                    Products
                   </Button>
                 </Link>
               </Col>
             </Row>
-            <Row>
+            {/* <Row>
               <Col span={24}>
                 <Link to="users">
                   <Button icon={<UserOutlined />} ghost>
@@ -36,7 +36,7 @@ function DashBoard() {
                   </Button>
                 </Link>
               </Col>
-            </Row>
+            </Row> */}
           </Col>
           <Col span={20} className={classes.content}>
             <Outlet />

@@ -19,11 +19,6 @@ function LoginForm() {
   const isLogin = useSelector((state) => state.FileManager.isLogin);
   const [errorInput, setErrorInput] = useState("");
 
-  useEffect(() => {
-    if (isLogin) navigate("..");
-    // eslint-disable-next-line
-  }, [isLogin]);
-
   const handleLoginBtnClick = () => {
     const data = {
       email: emailRef.current.value,

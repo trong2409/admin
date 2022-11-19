@@ -1,8 +1,8 @@
-import { Modal, Button, Form, Input, Select, Typography } from "antd";
+import { Modal, Button, Form, Input, Upload, Typography } from "antd";
 import { useState } from "react";
-import { UsergroupAddOutlined } from "@ant-design/icons";
+import { UsergroupAddOutlined, UploadOutlined } from "@ant-design/icons";
 
-function NewGroupModal() {
+function NewProductModal() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const showModal = () => {
@@ -16,6 +16,7 @@ function NewGroupModal() {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
+
   return (
     <>
       <Button
@@ -23,10 +24,10 @@ function NewGroupModal() {
         onClick={showModal}
         icon={<UsergroupAddOutlined />}
       >
-        New Group
+        New Product
       </Button>
       <Modal
-        title={<Typography.Text>NEW GROUP</Typography.Text>}
+        title={<Typography.Text>NEW PRODUCT</Typography.Text>}
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
@@ -35,12 +36,17 @@ function NewGroupModal() {
           <Form.Item label="Enter name" name="name">
             <Input />
           </Form.Item>
-          <Form.Item label="Choose folder access" name="access">
-            <Select mode="multiple" allowClear>
-              <Select.Option key="A">Folder A</Select.Option>
-              <Select.Option key="B">Folder B</Select.Option>
-              <Select.Option key="C">Folder C</Select.Option>
-            </Select>
+          <Form.Item label="Enter price" name="price">
+            <Input />
+          </Form.Item>
+          <Form.Item label="Upload image" name="image">
+            <Upload
+              action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+              listType="picture"
+              maxCount={1}
+            >
+              <Button icon={<UploadOutlined />}>Upload</Button>
+            </Upload>
           </Form.Item>
           <Form.Item label="Enter description" name="description">
             <Input.TextArea />
@@ -51,4 +57,4 @@ function NewGroupModal() {
   );
 }
 
-export default NewGroupModal;
+export default NewProductModal;
